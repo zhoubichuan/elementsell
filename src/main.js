@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import vueRouter from 'vue-router'
+import vueResource from 'vue-resource'
 import goods from './components/goods/goods'
 import ratings from './components/ratings/ratings'
 import seller from './components/seller/seller'
@@ -10,6 +11,7 @@ import seller from './components/seller/seller'
 
 Vue.config.productionTip = false
 Vue.use(vueRouter);
+Vue.use(vueResource)                                                  
 
 const routes = [
   {
@@ -29,6 +31,7 @@ const routes = [
 ]
 
 const router = new vueRouter({
+  linkActiveClass: 'active',
   routes
 });
 /* eslint-disable no-new */
